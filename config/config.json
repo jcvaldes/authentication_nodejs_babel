@@ -1,0 +1,32 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "authz_development",
+    "host": "127.0.0.1",
+    "port": 5437,
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "logging": true
+  },
+  "test": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "authz_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": 3306,
+    "operatorsAliases": false,
+    "logging": false
+  },
+  "production": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "authz_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": 3306,
+    "operatorsAliases": false,
+    "logging": false
+  }
+}
