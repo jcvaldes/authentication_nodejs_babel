@@ -2,20 +2,26 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import db from './models'
+import path from 'path'
+const dotenv = require('dotenv').config({ path: path.join(__dirname, './', '/.env') }).parsed
+
 const app = express()
+
+
+const node_env = process.env.NODE_ENV || 'development'
+const port = +process.env.PORT || +dotenv.PORT
+
 
 // Body Parser
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-const node_env = process.env.NODE_ENV || 'development'
-const port = +process.env.PORT || 3000
 //cors
 app.use(cors())
 
 
 app.get('/', (req, res) => {
-  res.send('API resto Ok!')
+  res.send('API!')
 })
 
 //Conexion a DB por Sequelize
